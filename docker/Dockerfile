@@ -24,5 +24,5 @@ RUN mvn package -Dmaven.test.skip=true
 FROM openjdk:11-jdk
 COPY --from=0 /build/target/gateway-service-1.1-SNAPSHOT.jar /app/target/gateway-service-1.1-SNAPSHOT.jar
 
-EXPOSE 8060
-ENTRYPOINT [ "java", "-jar", "/app/target/gateway-service-1.1-SNAPSHOT.jar", "--server.port=8060" ]
+EXPOSE 9999
+ENTRYPOINT [ "java", "-jar", "/app/target/gateway-service-1.1-SNAPSHOT.jar", "--server.port=9999" ]
